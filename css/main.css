@@ -62,44 +62,19 @@ body {
 .night {
   z-index: -1;
   position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
   width: 100%;
   height: 100%;
-  filter: blur(0.1vmin);
-  background-image: radial-gradient(
-      ellipse at top,
-      transparent 0%,
-      var(--dark-color)
-    ),
-    radial-gradient(
-      ellipse at bottom,
-      var(--dark-color),
-      rgba(145, 233, 255, 0.2)
-    ),
-    repeating-linear-gradient(
-      220deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
-    repeating-linear-gradient(
-      189deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
-    repeating-linear-gradient(
-      148deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
-    linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+  filter: grayscale(100%);
+  background-image: url("../img/floryyo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-height: 900px){
+  .night{
+    background-size: cover;
+  }
 }
 
 .flowers {
@@ -107,6 +82,7 @@ body {
   transform: scale(0.9);
   /*margin-bottom: 100px;
   */
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -1626,6 +1602,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  overflow: hidden;
 }
 
 h1 {
@@ -1657,3 +1634,15 @@ h1 {
 }
 
 /* Agregar más estilos según sea necesario */
+
+#playaudio{
+  width: 15em;
+  margin: 1em 0;
+  height: 3em;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #fddd25;
+  color: white;
+  text-shadow: 5px 5px 10px black;
+}
